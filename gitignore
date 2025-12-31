@@ -1,0 +1,11 @@
+# Docker / MySQL の実データ（絶対に除外）
+Kintai/docker/mysql/data/
+
+# Laravel
+Kintai/src/laravel/.env
+Kintai/src/laravel/vendor/
+Kintai/src/laravel/node_modules/
+
+# OS / Editor
+.DS_Store
+.vscode/
