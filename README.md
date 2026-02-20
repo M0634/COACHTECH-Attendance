@@ -1,4 +1,4 @@
-# Coachtech-Attendance
+# 勤怠アプリ　模擬案件
 
 ## 環境構築
 
