@@ -1,1 +1,244 @@
-attendance/detail.blade.php
+/* =========================
+   全体
+========================= */
+.attendance-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #f4f4f4;
+    padding: 30px 40px 50px;
+}
+
+/* =========================
+   タイトル
+========================= */
+.page-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-left: 4px solid #000;
+    padding-left: 10px;
+}
+
+/* =========================
+   承認待ちメッセージ
+========================= */
+.pending-message {
+    color: #d00;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   テーブル
+========================= */
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.detail-table th,
+.detail-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.detail-table th {
+    width: 30%;
+    background-color: #fafafa;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+}
+
+.detail-table tr:last-child th,
+.detail-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================
+   input / textarea 共通
+========================= */
+.detail-table input[type="time"],
+.detail-table textarea {
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.detail-table input[type="time"] {
+    width: 120px;
+}
+
+.detail-table textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+/* =========================
+   disabled
+========================= */
+.detail-table input:disabled,
+.detail-table textarea:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+/* =========================
+   エラーメッセージ
+========================= */
+.error-messages {
+    margin-top: 20px;
+    color: #d00;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.error-messages li {
+    margin-bottom: 5px;
+}
+
+.error-message {
+    color: #e60000;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* =========================
+   ボタン
+========================= */
+.button-area {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-submit:hover {
+    opacity: 0.8;
+}
+
+/* =========================================================
+   PC対応（1400px - 1540px）
+========================================================= */
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .attendance-detail {
+        max-width: 1000px;
+        padding: 40px 60px 60px;
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+
+    .detail-table th,
+    .detail-table td {
+        padding: 18px;
+        font-size: 15px;
+    }
+
+    .detail-table input[type="time"] {
+        width: 140px;
+    }
+}
+
+/* =========================================================
+   タブレット対応（768px - 850px）
+========================================================= */
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .attendance-detail {
+        max-width: 100%;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    /* テーブルを縦積みに */
+    .detail-table,
+    .detail-table tbody,
+    .detail-table tr,
+    .detail-table th,
+    .detail-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .detail-table tr {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    .detail-table th {
+        background-color: transparent;
+        font-weight: bold;
+        padding: 5px 0;
+    }
+
+    .detail-table td {
+        padding: 5px 0 10px;
+    }
+
+    /* 入力欄 */
+    .detail-table input[type="time"] {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .detail-table textarea {
+        width: 100%;
+    }
+
+    /* ボタン */
+    .button-area {
+        text-align: center;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+}
+/* =========================
+   承認済みメッセージ（右下固定・非被り）
+========================= */
+
+.approved-message {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 20px;
+    font-size: 13px;
+    color: #fff;
+    background-color: #888;
+}
+
+
+.detail-table {
+    margin-bottom: 20px;
+}
+
+.button-area,
+.pending-message,
+.approved-message {
+    margin-top: 16px;
+}
+
+.btn-submit.approved {
+    background-color: #ddd;
+    color: #666;
+    cursor: default;
+    pointer-events: none;
+}

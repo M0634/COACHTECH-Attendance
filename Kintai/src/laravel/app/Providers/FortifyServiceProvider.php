@@ -6,11 +6,14 @@ use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
+use App\Http\Responses\LogoutResponse as CustomLogoutResponse;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
+// ★ 追加（LogoutResponse 用）
+use Laravel\Fortify\Contracts\LogoutResponse;
 use Laravel\Fortify\Fortify;
 
 class FortifyServiceProvider extends ServiceProvider
@@ -20,7 +23,11 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // ★ ここに追加（最重要）
+        $this->app->singleton(
+            LogoutResponse::class,
+            CustomLogoutResponse::class
+        );
     }
 
     /**

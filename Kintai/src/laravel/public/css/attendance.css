@@ -1,1 +1,126 @@
+body {
+    background-color: #f0eff2;
+}
+
 attendance.blade.php
+.attendance-container {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-badge {
+    background-color: #ccc;
+    color: #555;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.attendance-date {
+    font-size: 20px;
+}
+
+.attendance-time {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.attendance-button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 40px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.attendance-container {
+    margin: 0 auto;            /* 横中央 */
+    text-align: center;        /* 中の文字も中央 */
+}
+
+.attendance-container {
+    min-height: calc(100vh - 60px); /* ヘッダー分を引く */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;       /* 縦中央 */
+    align-items: center;           /* 横中央 */
+    text-align: center;
+}
+
+.attendance-actions {
+    display: flex;
+    gap: 24px;          /* ボタン間の余白 */
+    margin-top: 20px;
+}
+
+/* 退勤ボタンを少し目立たせたい場合（任意） */
+.attendance-button.finish {
+    background-color: #000;
+    color: #fff;
+}
+
+/* =========================
+   PC（1400px〜1540px）
+========================= */
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+
+    .attendance-container {
+        gap: 32px;
+    }
+
+    .attendance-date {
+        font-size: 22px;
+    }
+
+    .attendance-time {
+        font-size: 72px;
+    }
+
+    .attendance-button {
+        font-size: 20px;
+        padding: 14px 48px;
+    }
+
+    .attendance-actions {
+        gap: 32px;
+    }
+}
+
+/* =========================
+   タブレット（768px〜850px）
+========================= */
+@media screen and (min-width: 768px) and (max-width: 850px) {
+
+    .attendance-container {
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .status-badge {
+        font-size: 13px;
+        padding: 4px 12px;
+    }
+
+    .attendance-date {
+        font-size: 18px;
+    }
+
+    .attendance-time {
+        font-size: 48px;
+    }
+
+    .attendance-button {
+        font-size: 16px;
+        padding: 10px 32px;
+    }
+
+    .attendance-actions {
+        gap: 16px;
+    }
+}

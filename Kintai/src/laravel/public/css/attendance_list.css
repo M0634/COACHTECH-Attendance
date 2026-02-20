@@ -1,1 +1,113 @@
-attendance/list.blade.php
+body {
+    background-color: #f0eff2;
+}
+
+/* =====================
+   共通（ベース）
+===================== */
+.attendance-list-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.month-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.month-switch a {
+    text-decoration: none;
+    color: #333;
+}
+
+.current-month {
+    font-weight: bold;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.attendance-table th {
+    background-color: #f7f7f7;
+    font-weight: normal;
+}
+
+.detail-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* =====================
+   PC（1400px〜1540px）
+===================== */
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+
+    .attendance-list-container {
+        max-width: 1100px;
+        padding: 48px 24px;
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+
+    .attendance-table th,
+    .attendance-table td {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
+
+/* =====================
+   タブレット（768px〜850px）
+===================== */
+@media screen and (min-width: 768px) and (max-width: 850px) {
+
+    .attendance-list-container {
+        max-width: 100%;
+        padding: 24px 16px;
+    }
+
+    .page-title {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .month-switch {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .attendance-table th,
+    .attendance-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .detail-link {
+        font-size: 12px;
+    }
+}

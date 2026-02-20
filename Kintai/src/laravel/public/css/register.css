@@ -1,6 +1,11 @@
+/* =========================
+   共通（スマホ〜）
+========================= */
 .container {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: 60px auto;
+    padding: 0 16px;
 }
 
 .title {
@@ -21,6 +26,7 @@
     width: 100%;
     height: 36px;
     padding: 5px;
+    box-sizing: border-box;
 }
 
 .btn-submit {
@@ -29,6 +35,7 @@
     background: #000;
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 
 .login-link {
@@ -38,4 +45,46 @@
 
 .error-message {
     color: red;
+}
+
+/* =========================
+   タブレット（768px〜850px）
+========================= */
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .container {
+        max-width: 500px;
+        margin: 80px auto;
+    }
+
+    .form-group input {
+        height: 40px;
+    }
+
+    .btn-submit {
+        height: 44px;
+    }
+}
+
+/* =========================
+   PC（1400px〜1540px）
+========================= */
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .container {
+        max-width: 600px;
+        margin: 120px auto;
+    }
+
+    .title {
+        margin-bottom: 40px;
+    }
+
+    .form-group input {
+        height: 44px;
+        font-size: 16px;
+    }
+
+    .btn-submit {
+        height: 48px;
+        font-size: 16px;
+    }
 }
