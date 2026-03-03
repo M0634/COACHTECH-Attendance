@@ -1,0 +1,155 @@
+/* ================================
+   全体レイアウト
+================================ */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+
+main {
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 60px);
+    padding: 0 60px;
+}
+
+/* ================================
+   コンテナ
+================================ */
+
+.attendance-container {
+    max-width: 980px;
+    margin: 90px auto 80px;
+}
+
+/* ================================
+   ページタイトル
+================================ */
+
+.page-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-left: 18px;
+    border-left: 5px solid #000;
+    letter-spacing: 0.5px;
+}
+
+/* ================================
+   日付ナビ
+================================ */
+
+.date-nav {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.nav-button {
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.nav-button:hover {
+    color: #000;
+}
+
+.date-nav input[type="date"] {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* ================================
+   テーブルカード
+================================ */
+
+.attendance-table {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border-collapse: collapse;
+}
+
+/* ヘッダー */
+
+.attendance-table thead {
+    background-color: #fafafa;
+}
+
+.attendance-table th {
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    padding: 14px 0;
+    text-align: center;
+}
+
+/* 本文 */
+
+.attendance-table td {
+    font-size: 14px;
+    padding: 18px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 行ホバー */
+
+.attendance-table tbody tr:hover {
+    background-color: #fafafa;
+    transition: 0.2s ease;
+}
+
+/* ================================
+   詳細ボタン
+================================ */
+
+.detail-button {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.detail-button:hover {
+    opacity: 0.6;
+}
+
+/* ================================
+   データなし
+================================ */
+
+.no-data {
+    padding: 40px 0;
+    color: #999;
+    font-size: 14px;
+}
+
+/* ================================
+   ヘッダー補助
+================================ */
+
+.header {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 10;
+}

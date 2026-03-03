@@ -1,0 +1,81 @@
+.container {
+    width: 70%;
+    margin: 40px auto;
+}
+
+/* ページタイトル 左の黒縦棒 */
+.page-title {
+    position: relative;
+    padding-left: 14px;
+}
+
+.page-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background-color: #000;
+}
+
+
+/* テーブル共通 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: #f5f5f5;
+    font-weight: bold;
+}
+
+/* 詳細リンク */
+.detail-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.detail-link:hover {
+    text-decoration: underline;
+}
+
+/* 月切り替え */
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.month-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* CSV */
+.csv-area {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.csv-btn {
+    padding: 6px 12px;
+    border: 1px solid #000;
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
